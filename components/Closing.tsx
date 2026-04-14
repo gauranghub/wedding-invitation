@@ -72,11 +72,7 @@ export default function Closing() {
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end end'] })
   const   ringScale = useTransform(scrollYProgress, [0.3, 0.7], [0.5, 1])
-//   const ringScale = useTransform(
-//   scrollYProgress,
-//   [0, 0.3, 0.6],
-//   [0.7, 1, 1]
-// )
+
   const ringOpacity = useTransform(scrollYProgress, [0.1, 0.45], [0, 1])
 
   return (
