@@ -2,29 +2,27 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 const PHOTOS = [
   {
-    gradient: 'radial-gradient(ellipse 80% 70% at 40% 45%, #2A1050 0%, #0E1A60 35%, #06102A 70%, #030810 100%)',
+    src: '/gallery/img6.jpeg',
     overlay:  'linear-gradient(135deg, rgba(26,62,200,0.12) 0%, transparent 50%, rgba(0,0,0,0.3) 100%)',
-    caption: 'The First Meeting',
-    year: '2020',
+    caption: 'Written in the Stars',
     accent: 'rgba(26,62,200,0.8)',
   },
   {
-    gradient: 'radial-gradient(ellipse 75% 65% at 55% 50%, #3A1820 0%, #8C1535 35%, #3A0A18 70%, #080508 100%)',
+    src: '/gallery/img3.jpeg',
     overlay:  'linear-gradient(125deg, rgba(201,162,60,0.15) 0%, transparent 55%, rgba(0,0,0,0.35) 100%)',
-    caption: 'The Proposal',
-    year: '2023',
+    caption: 'Two Souls, One Journey',
     accent: 'rgba(201,162,60,0.8)',
   },
   {
-    gradient: 'radial-gradient(ellipse 85% 75% at 45% 40%, #0A2030 0%, #0F3A58 38%, #081828 72%, #030A10 100%)',
+    src: '/gallery/img7.jpeg',
     overlay:  'linear-gradient(145deg, rgba(201,162,60,0.1) 0%, transparent 50%, rgba(0,0,0,0.28) 100%)',
-    caption: 'Our Forever',
-    year: '2026',
+    caption: 'Home is Wherever You Are',
     accent: 'rgba(26,62,200,0.7)',
   },
 ]
@@ -61,8 +59,14 @@ function PhotoCard({ photo, index }: { photo: typeof PHOTOS[0]; index: number })
             : '0 12px 50px rgba(6,9,17,0.6)',
         }}
       >
-        {/* Main gradient image */}
-        <div className="absolute inset-0" style={{ background: photo.gradient }}/>
+        {/* Photo */}
+        <Image
+          src={photo.src}
+          alt={photo.caption}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 380px"
+        />
 
         {/* Cinematic overlay */}
         <div className="absolute inset-0" style={{ background: photo.overlay }}/>
@@ -82,11 +86,7 @@ function PhotoCard({ photo, index }: { photo: typeof PHOTOS[0]; index: number })
         {/* Content at bottom */}
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-7 pt-16"
           style={{ background: 'linear-gradient(to top, rgba(4,6,12,0.85), transparent)' }}>
-          <p className="font-display text-[9px] tracking-[0.4em] uppercase mb-1"
-            style={{ color: photo.accent }}>
-            {photo.year}
-          </p>
-          <p className="font-script text-3xl" style={{ color: '#F0D898' }}>
+          <p className="font-script text-2xl" style={{ color: '#F0D898', marginLeft: '1rem' }}>
             {photo.caption}
           </p>
         </div>

@@ -17,7 +17,7 @@ export default function MusicToggle() {
 
   const toggle = () => {
     if (!audioRef.current) {
-      audioRef.current = new Audio('/music/wedding.mp3')
+      audioRef.current = new Audio('/music/wedding.m4a')
       audioRef.current.loop = true
       audioRef.current.volume = 0.3
     }

@@ -160,10 +160,14 @@ export default function Hero() {
         <motion.div variants={rise} className="mt-8 flex flex-col items-center gap-1">
           <p className="font-display text-[10px] tracking-[0.4em] uppercase"
             style={{ color: 'var(--color-gold)', marginTop: '1rem' }}>Thursday</p>
-          <p className="font-display text-5xl font-light"
-            style={{ color: 'var(--color-ice)', textShadow: '0 0 30px rgba(201,162,60,0.3)' }}>
+          <motion.p
+            className="font-display text-5xl font-light"
+            style={{ color: 'var(--color-ice)', textShadow: '0 0 30px rgba(201,162,60,0.3)', display: 'inline-block' }}
+            animate={{ scale: [1, 1.18, 1, 1.12, 1] }}
+            transition={{ duration: 0.9, repeat: Infinity, repeatDelay: 1.2, ease: 'easeInOut' }}
+          >
             30
-          </p>
+          </motion.p>
           <p className="font-display text-[10px] tracking-[0.35em] uppercase"
             style={{ color: 'var(--color-gold)' }}>April · 2026</p>
         </motion.div>
