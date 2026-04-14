@@ -32,8 +32,8 @@ const josefin = Josefin_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Sophia & Alexander — Wedding Invitation',
-  description: 'Join us to celebrate the marriage of Sophia & Alexander on 14th June, 2026.',
+  title: 'Kumud & Utsav — Wedding Invitation',
+  description: 'Join us to celebrate the marriage of Kumud & Utsav on 30th April, 2026.',
 }
 
 export const viewport: Viewport = {

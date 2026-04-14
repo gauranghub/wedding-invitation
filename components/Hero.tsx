@@ -92,8 +92,6 @@ export default function Hero() {
           The Wedding of
         </motion.p>
 
-        {/* Name: Sophia — paddingTop pushes the tall script ascender down inside the element,
-            guaranteeing no overlap with the heading above regardless of font render */}
         <motion.h1
           variants={rise}
           className="font-script script-safe select-none"
