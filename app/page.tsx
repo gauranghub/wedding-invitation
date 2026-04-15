@@ -11,7 +11,7 @@ import ScrollProgress from '@/components/ScrollProgress'
 export default function WeddingPage() {
   return (
     <main className="relative w-full max-w-lg mx-auto">
-      <ScrollProgress />
+      {/* <ScrollProgress /> */}
       <FloatingPetals />
       <MusicToggle />
       <Hero />

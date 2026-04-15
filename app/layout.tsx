@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${cinzel.variable} ${cormorant.variable} ${greatVibes.variable} ${josefin.variable}`}
     >
-      <body>{children}</body>
+      <body style={{display:'flex', justifyContent:'center'}}>{children}</body>
     </html>
   )
 }

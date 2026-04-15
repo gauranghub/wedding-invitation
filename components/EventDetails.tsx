@@ -8,8 +8,8 @@ const DAY_ONE = {
   date: '29 April 2026',
   label: 'Day 1 · Tuesday',
   events: [
-    { time: '10:00 AM', name: 'Mayra',          sub: 'Family blessings & rituals' },
     { time: '11:00 AM', name: 'Haldi Carnival',  sub: 'Colors & celebration' },
+    { time: '02:00 PM', name: 'Mayra',          sub: 'Family blessings & rituals' },
     { time: '06:00 PM', name: 'Sagai',           sub: 'Ring ceremony' },
     { time: '08:00 PM', name: 'Sangeet',         sub: 'Music & dance evening' },
   ],

@@ -144,6 +144,8 @@ export default function Closing() {
             className="font-script script-safe leading-tight"
             style={{
               fontSize: 'clamp(3.5rem, 16vw, 5rem)',
+              overflow: 'visible',
+              whiteSpace: 'nowrap',
               background: 'linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-pale) 50%, var(--color-gold) 100%)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
               filter: 'drop-shadow(0 0 24px rgba(201,162,60,0.3))',
@@ -184,7 +186,9 @@ export default function Closing() {
           <p
             className="font-script script-safe"
             style={{
-              fontSize: 'clamp(2.5rem, 12vw, 3.5rem)',
+              fontSize: 'clamp(2rem, 12vw, 3rem)',
+              overflow: 'visible',
+              whiteSpace: 'nowrap',
               wordSpacing: '0.3em',
               background: 'linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-pale) 100%)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
